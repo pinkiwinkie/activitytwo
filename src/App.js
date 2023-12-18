@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './img/logo.png';
+import Button from './components/Button';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    const gestionClick =()=>{
+        console.log('click');
+    };
+
+    const resetCounter = ()=>{
+        console.log('reset');
+    };
+
+    return ( 
+    <div className = "App">
+        <div className = 'logo-container'>
+            <img className = 'logo'src = { logo } alt = 'logo'/>
+        </div> 
+        <div className='container-main'>
+            <Button
+                text='click'
+                isbuttonClick={true}
+                gestionClick={gestionClick}/>
+            <Button
+                text='Reset'
+                isbuttonClick={false}
+                gestionClick={resetCounter}/>
+        </div>
     </div>
-  );
+    );
 }
 
 export default App;
