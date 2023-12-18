@@ -31,10 +31,19 @@ body {
 }
 
 .container-main {
-    height: 550px;
+    height: 700px;
     min-width: 600px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-container{
+    height: 200px;
+    width: 700px;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
